@@ -27,6 +27,7 @@
     kage: '年龄'
   }
   const arr = ['姓名','所属国','性别','年龄'];
+  import productList from './data/product.json';
 </script>
 
 <template>
@@ -53,7 +54,15 @@
       </tr>
     </tbody>
   </table>
-  
+  <hr>
+  <div>
+    <div class="product" v-for="(v,k) in productList.data">
+      <img :src="'./images/img10.jpg'" alt="v.product_title">
+      <h5>{{v.product_name}}</h5>
+      <h3 class="price">￥{{v.product_price}}</h3>
+      <div class="intro">{{v.product_intro}}</div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -68,5 +77,27 @@
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+.product{
+  width: 28%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px ;
+}
+.product > img:first-child{
+  width: 90%;
+  height: auto;
+  border: 1px solid lightcyan;
+  padding: 2px;
+}
+.product > h3.price{
+  color: red;
+  text-decoration: line-through;
+  text-align: justify;
+}
+.product > div.intro{
+  text-align: justify;
+  text-indent: 2em;
 }
 </style>
