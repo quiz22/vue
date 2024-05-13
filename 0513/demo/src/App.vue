@@ -5,6 +5,9 @@ import {ref} from 'vue';
 
 let message = ref("湖南");
 let cnt = ref(3);
+let addNuber = ()=>{
+  cnt.value ++;
+}
 </script>
 
 <template>
@@ -18,6 +21,8 @@ let cnt = ref(3);
   </div>
   <!-- <HelloWorld msg="Vite + Vue" /> -->
   <MyComponent :title="message" :count="cnt" />
+  <hr>
+  <button @click="addNuber">+1</button>
 </template>
 
 <style scoped>

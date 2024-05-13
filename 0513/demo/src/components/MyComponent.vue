@@ -9,7 +9,16 @@
 <script setup>
     const props = defineProps({
         title: String,
-        count: {required: true}
+        count: {
+            validator(value){
+                if(value <= 10){
+                    return true;
+                }else{
+                    alert("数据超出范围！");
+                    return false;
+                }
+            }
+        }
     })
 </script>
 
