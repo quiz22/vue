@@ -1,22 +1,26 @@
 <template>
     <div class="footer">
-        <span class="todo-count">共<strong>0</strong>条未完成任务</span>
+        <span class="todo-count">共<strong>{{ lastLength }}</strong>条未完成任务</span>
         <ul class="filters">
             <li>
-                <a class="selected" href="#/">All</a>
+                <a class="selected" @click.prevent="changeStatus('all')" :class="{selected: status == 'all'}" href="#/">All</a>
             </li>
             <li>
-                <a href="#/active">Active</a>
+                <a href="#/active" @click.prevent="changeStatus('active')" :class="{selected: status == 'active'}">Active</a>
             </li>
             <li>
-                <a href="#/completed">Completed</a>
+                <a href="#/completed" @click.prevent="changeStatus('completed')" :class="{selected: status == 'completed'}">Completed</a>
             </li>
         </ul>
     </div>
 </template>
 
 <script setup>
-
+const props = defineProps(['lastLength','status']);
+const emit = defineEmits(['updateStatus']);
+const changeStatus = st =>{
+  emit('updateStatus',st);
+}
 </script>
 
 <style>

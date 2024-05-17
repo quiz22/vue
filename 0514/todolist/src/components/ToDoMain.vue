@@ -5,7 +5,7 @@
                 <div class="view">
                     <input class="toggle" type="checkbox" v-model="item.done" />
                     <label>{{ item.name }}</label>
-                    <button class="destroy"></button>
+                    <button class="destroy" @click="delTodo(item.id)"></button>
                 </div>
             </li>
         </ul>
@@ -14,6 +14,10 @@
 
 <script setup>
 const props = defineProps(['list']);
+const emit = defineEmits(['delTodo']);
+const delTodo = id =>{
+  id &&　emit('delTodo',id);
+}
 </script>
 
 <style>
