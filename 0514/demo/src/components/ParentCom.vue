@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>父组件当前的数据值为：{{sum}}</p>
-        <SubCom @update-count="updateEmitCount" />
+        <p>父组件当前的数据值为：{{ sum }}</p>
+        <SubCom @updateCount="updateEmitCount" />
     </div>
 </template>
 
@@ -12,6 +12,7 @@
     const updateEmitCount = v =>{
         sum.value += v;
     };
+
 </script>
 
 <style scoped>

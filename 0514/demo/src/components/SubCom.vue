@@ -1,7 +1,7 @@
 <template>
     <div>
-        <p>count的值为：{{count}}</p>
-        <button @click="add">加n</button>
+        <p> count 的值为：{{ count }}</p>
+        <button @click="add"> 加 n</button>
     </div>
 </template>
 
@@ -10,9 +10,9 @@
     const count = ref(1);
     const emit = defineEmits(['updateCount']);
     const add = ()=>{
-        count.value++;
-        emit('updateCount',count.value);
-    }
+        count.value ++;
+        emit('updateCount', count.value);
+    };
 </script>
 
 <style scoped>
