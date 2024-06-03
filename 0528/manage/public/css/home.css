@@ -1,0 +1,15 @@
+<style lang="less">
+.home-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .home-main-box {
+    height: 100%;
+    display: flex;
+    .home-main-body {
+      padding: 15px;
+      flex: 1;
+    }
+  }
+}
+</style>

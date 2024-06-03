@@ -1,12 +1,13 @@
-<script setup>
-</script>
-
 <template>
     <div>
-        <h3>TAB1组件</h3>
+        <h3>TAB1 组件</h3>
     </div>
 </template>
 
-<style scoped>
+<script setup>
+
+</script>
+
+<style>
 
 </style>

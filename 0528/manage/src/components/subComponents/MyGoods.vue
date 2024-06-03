@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>TAB2 组件</h3>
+        <h1>商品管理界面</h1>
     </div>
 </template>
 
@@ -8,6 +8,6 @@
 
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
